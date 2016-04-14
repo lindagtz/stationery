@@ -1,0 +1,813 @@
+body{
+	background-color: #F2F2F2;
+
+}
+
+
+
+/*DATOS QUE APARECEN AL INICIAR SESION*/
+.datos{
+
+	font-family: Calibri Light;
+	padding-right: 10px;
+	font-size: 30px;
+}
+
+
+
+
+/* ESTILOS DE EL LOGO*/
+#logo{
+	background-color: #727F28;
+	width: 100%;
+	height: auto;
+	padding: 5px;
+	border-radius: 10px 0px 0px 0px;
+	max-width: 1000px;
+	margin: 0px auto;
+	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+}
+
+#logo img{
+	background-color: white;
+	width: 20%;
+	height: auto;
+	opacity: .5;
+	border-radius: 10px;
+	transition: all 0.5s linear 0s;
+}
+
+#logo img:hover{
+	background-color: white;
+	width: 20%;
+	height: auto;
+	opacity: 1;
+	border-radius: 10px;
+	transition: all 0.3s linear 0s;
+}
+
+
+/*
+Menu dispositivo
+
+-ESTILO DE LA BARRA DE MENU
+*/
+
+header {
+	width: 100%;
+
+}
+
+header nav{
+	width: 100%;
+	max-width: 1000px;
+	margin: 20px auto;
+	background-color: #AECC03;
+	z-index: 1000;
+}
+
+header nav ul{
+	overflow: hidden;/* independiza al usar float left*/
+	list-style: none;/*quita los puntos de la lista*/
+}
+
+header nav ul li{
+	float: left;/*alinea la lista hacia la derecha*/
+}
+
+header nav ul li a{
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	font-family: Calibri light;
+	font-size: 20px;
+	transition: all 0.3s linear 0s;
+}
+
+header nav ul li a:hover{
+	padding: 20px;
+	background-color: #F2F2F2;
+	display: block;
+	text-decoration: none;
+	transition: all 0.3s linear 0s;
+}
+
+.menu_bar{
+	display: none;/*oculta el objeto*/
+}
+
+/*
+-METODO QUE HACE LAS CONDICIONES DE EL RESPONSIVE
+*/
+
+@media screen and (max-width: 800px){
+	/*Cuando llega a 800Px
+	pone el menu en el lado iquierdo acomodado
+	con un largo de 100% dejando solo un lado a la vista*/
+	header nav{
+		width: 80%;
+		height: 100%;
+		margin: 0px;
+		position: fixed;
+		left: -100%;
+	}
+
+	/*acomoda los objetos hacia abajo con un borde 
+	blanco hacia ariiba
+	*/
+
+	header nav ul li{
+		display: block;
+		float: none;
+		border-bottom: 1px solid white;
+		
+	}
+
+	/*APARECE EL BOTON DE EL MENU*/
+
+	.menu_bar{
+		display: block;
+		width: 100%;
+		
+	}
+
+	/*da formato al boton*/
+	.menu_bar .bt-menu{
+		display: block;/*visualiza el objeto*/
+		padding: 10px;
+		background:#AECC03;  
+		color: black;
+		text-decoration: none;
+		font-weight: bold;/*le da un tamaño bold a las letras*/
+		font-size: 25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+	}
+
+	/*Alinea el boton hacia la derecha*/
+		.menu_bar span{
+		float: right;
+		}
+
+		/*HACE LAS RAYA DEL MENU*/
+		#lines { 
+		    border-bottom: 17px double black; 
+		    border-top: 6px solid black; 
+		    height: 5px; 
+		    width:30px;
+		}
+
+
+	/*MEDIA ESTILOS DE CONTENNIDO*/
+	.subcontenedor article{
+		width: 46% !important;
+		height: 170px !important;
+	}
+
+
+	/*VIDEO*/
+	.video img{
+		padding-bottom: 50px !important;
+	}
+
+
+
+}
+
+/*MEDIA 400PX*/
+@media screen and (max-width: 400px){
+	/*ARTICULOS DE EL CONTENEDOR*/
+	.subcontenedor article{
+		width: 95% !important;
+		height: 170px !important;
+	}
+
+	/*MEDIA CONTENIDO*/
+	.verprecio span{
+		width: 60% !important;
+		 opacity: 1 !important;
+		 background: none repeat scroll 0 0 rgba(0,0,0,0.7);
+	}
+
+	/*IMAGEN PRINCIPAL*/
+	.image #linea{
+	font-size: 30px !important; 
+	}
+	
+	.image span p{
+	font-size: 20px !important;
+	}
+
+	/*MEDIA ETIUETA VIDEO*/
+	.video video{
+		width: 100% !important;
+	}
+
+	.video img{
+		padding-bottom: 0px !important;
+		width: 70% !important;
+		padding-left: 40px;
+	}
+
+
+	.datos{
+
+	font-family: Calibri Light;
+	padding-right: 10px;
+	font-size: 15px !important;
+	}
+
+	/*MODAL*/
+
+	.form table {
+	width: 100% !important;
+ 	font-size: 16px !important;
+ 	
+	}
+	.form table input{
+	width: 100%;
+	height: 20px !important;
+	}
+
+
+}
+
+
+/*FIN DEL MEDIA*/
+
+
+
+/*ESTILOS DE LA IMAGEN SUBHEADER*/
+
+.image{
+ 	margin: 0px auto;
+ 	margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+
+}
+
+.image img{
+	width: 100%;
+	height: auto;
+}
+
+
+  /* los textos que, por defecto, permanecerán ocultos */ 
+.image span {
+    color: #FFF;
+    opacity: 0; 
+    width: 50%;
+    height: 99%;
+    position: absolute;
+    text-align: center;
+    transition: all 0.3s linear 0s; /* agregar los prefijos para cada navegador */
+  }
+
+
+
+.image:hover span { /* desde la derecha */
+	background: none repeat scroll 0 0 rgba(0,0,0,0.7);
+    opacity: 1;
+    width: 100%;
+    height: 99%;
+    transition: all 0.3s linear 0s;
+  }
+
+.image #linea{
+	width: 100%;
+	background-color:#F29D10;
+	height: auto;
+	font-size: 50px; 
+}
+
+.image span p{
+	font-size: 30px;
+	color: #F29D10;
+}
+  /* y esto es lo que generará el efecto */
+
+
+/*PROMOCIONES*/
+.promocion {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+	font-size: 35px;
+	font-family: Calibri light;
+	background: rgba(0,0,0,0.7);
+	color: white;
+	text-align: center;
+}
+
+/*METODOS DE EL CONTENEDOR :)*/
+.contenedor{
+	border-top: 10px solid #FF8F00;
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	overflow: hidden;
+	max-width: 1000px;
+	margin: auto;
+	margin-bottom: 20px;
+	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+}
+
+.contenedor .subcontenedor{
+	width: 100%;
+	overflow: hidden;
+	padding: 10px;
+	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+}
+
+.contenedor article{
+	width: 48%;
+	height: 300px;
+	background-color: #FFF60F;
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+
+.contenedor article img{
+	border-radius: 5px;
+}
+
+/*--ESTILOS DEL LOGIN*/
+
+.contenedor aside{
+
+	width: 35%;
+	height: auto;
+	float: left;
+	padding-top: 10px;
+	text-align: center;
+	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+}
+
+
+#cabezalogin{
+	text-align: center;
+	margin: 0 auto;
+	width: 90%;
+	height: 150px;
+	background-color: black;
+	border-radius: 10px 10px 0px 0px;
+}
+#cabezalogin img{
+	height: 55%;
+	opacity: .8;
+	transition: all 0.3s linear 0s;
+}
+
+#cabezalogin img:hover{
+	opacity: 10;
+	transition: all 0.3s linear 0s;
+}
+
+#cabezalogin span{
+	font-size: 35px;
+	font-family: Calibri light;
+		color: white;
+}
+
+
+
+#foterlogin{
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #D9FF04;
+	width: 90%;
+	height: auto;
+	border-radius: 0px 0px 10px 10px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+}
+
+#foterlogin table{
+	margin: 0 auto;
+	width: 90%;
+	font-family: Calibri light;
+	color: #6D7F02;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 20px
+}
+
+.contenedor aside input{
+	width: 100%;
+	height: 30px;
+}
+
+#foterlogin input[type="submit"]{
+	width: 80%;
+	height: 50px;
+	font-family: Calibri light;
+	font-weight: bold;
+	font-size: 25px;
+	background-color: #AECC03;
+}
+
+#foterlogin input[type="submit"]:hover{
+	opacity: .6;
+}
+
+#foterlogin span{
+	font-family: Calibri light;
+	font-weight: bold;
+	font-size: 25px;
+	text-decoration: none;
+	color: black;
+}
+
+/*VENTANA MODAL*/
+
+/*
+para la ventama modal
+
+*/
+
+.modalmask {
+	position: fixed;
+	font-family: Arial, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalmask:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalbox{
+	width: 100%;
+	max-width: 600px;
+	position: relative;
+	background: #fff;
+	border-radius:15px;
+	-webkit-transition: all 500ms ease-in;
+	-moz-transition: all 500ms ease-in;
+	transition: all 500ms ease-in;
+	
+}
+
+/*LINEA NARANJA*/
+
+.saveExito{
+	width: 100%;
+	text-align: center;
+	font-family: Calibri Light;
+	font-size: 20px;
+	background-color: #FF530D;
+	border-radius:   0px 0px 15px 15px;
+	display: block;
+}
+
+#exito:target{
+	display: none;
+}
+/*
+.saveExito a:link   {   
+ text-decoration:none;   
+}   
+*/
+.movedown {
+	margin: 0 auto;
+}
+
+.modalmask:target .movedown{		
+	margin:10% auto;
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: 1px;
+	text-align: center;
+	top: 1px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius:3px;
+	font-size:16px;
+}
+
+.close:hover { 
+	background: #FAAC58; 
+	color:#222;
+}
+
+/*Form del Modal*/
+.titleform{
+	margin: 0px auto;
+	width: 100%;
+	color: white;
+	font-family: Calibri light;
+	font-size: 50px;
+	background-color: blue;
+	text-align: center;
+	background-color:;
+	background: rgba(0,0,0,0.8);
+	border-radius:  15px 15px 0px 0px;
+
+}
+
+
+.form{
+	margin: 0px auto;
+	border-top: 10px solid;
+	width: 100%;
+	text-align: center;
+	background-color:  #AECC03;
+	border-radius: 0px 0px 15px 15px ;
+}
+
+.form table {
+	width: 80%;
+ 	margin: 0px auto;
+ 	margin-bottom: 20px;
+ 	margin-top: 20px;
+ 	font-size: 30px;
+ 	
+}
+
+.form table tr td{
+	text-align: right;
+	padding-right: 15px;
+}
+
+.form table input{
+	width: 100%;
+	height: 30px;
+}
+
+.form input{
+	margin: 0px auto;
+	margin-bottom: 20px;
+	width: 120px;
+	height: 30px;
+	font-family: Calibri light;
+	font-size: 20px;
+}
+
+/*FORM DE 800PX*/
+
+/*Form del Modal*/
+.titleform800px{
+	display: none;
+	margin: 0px auto;
+	width: 100%;
+	max-width: 800px;
+	color: white;
+	font-family: Calibri light;
+	font-size: 50px;
+	background-color: blue;
+	text-align: center;
+	background-color:;
+	background: rgba(0,0,0,0.8);
+
+}
+
+
+.form800px{
+	display: none;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	border-top: 10px solid;
+	width: 100%;
+	text-align: center;
+	background-color:  #AECC03;
+	max-width: 800px;
+}
+
+.form800px table {
+	width: 80%;
+ 	margin: 0px auto;
+ 	margin-bottom: 20px;
+ 	margin-top: 20px;
+ 	font-size: 30px;
+ 	
+}
+
+.form800px table tr td{
+	text-align: right;
+	padding-right: 15px;
+}
+
+.form800px table input{
+	width: 100%;
+	height: 30px;
+}
+
+.form800px input{
+	margin: 0px auto;
+	margin-bottom: 20px;
+	width: 120px;
+	height: 30px;
+	font-family: Calibri light;
+	font-size: 20px;
+}
+
+
+/*METODO QUE LE DA EL HOVER A LA S IMAGENES*/
+
+/* el contenedor y la imagen */
+.verprecio {
+
+  	margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+
+  }
+
+ .verprecio img{
+ 	width: 100%;
+ 	height: 100%;
+ }
+
+  /* los textos que, por defecto, permanecerán ocultos */ 
+.verprecio span {
+    color: #FFF;
+    opacity: 0; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    transition: all 0.3s linear 0s; /* agregar los prefijos para cada navegador */
+  }
+
+.verprecio:hover span { /* desde la derecha */
+    background: none repeat scroll 0 0 rgba(0,0,0,0.7);
+    opacity: 1;
+  }
+
+
+.verprecio span p{
+	font-size: 30px;
+	color: #F29D10;
+	margin-top: 25%;
+}
+  /* y esto es lo que generará el efecto */
+
+/*ESTILOS PARA VIDEO*/
+
+.video{
+	border-top: 5px solid black;
+	background: rgba(0,0,0,0.8);
+	padding: 30px;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+}
+
+.video video{
+	width: 60%;
+	border-radius: 10px;
+}
+.video img{
+	padding-bottom: 70px;
+	width: 37%;
+}
+
+/*ESTILOS PARA CONOCENOS*/
+
+.conocenos{
+	border-top: 10px solid #D9FF04;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+	height: auto;
+	background: rgba(0,0,0,0.6);
+	text-align: center;
+	padding: 30px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+
+}
+
+.conocenos .info{
+	font-family: Calibri light;
+	font-size: 20px;
+	color: white;
+
+}
+
+.conocenos img{
+    opacity: .6;
+}
+.conocenos img:hover{
+	opacity: 1;
+}
+
+/*ESTILOS PARA EL PIE DE PAGINA*/
+#foter{
+	text-align: center;
+	color: #6D7F02;
+	background-color: #E5FF51;
+	font-size: 20px;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0px auto;
+
+	-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-box-sizing:border-box;
+}
+
+
+
+/**FORMULARIO PROV/
+
+
+
+
+/*FORMREG*/
+
+#titleformreg{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+	text-align: center;
+	font-size: 40px;
+	font-family: Calibri light;
+	color: #7F6D00;
+	background-color: #FFDA00;
+}
+
+#formreg{
+	padding-bottom: 20px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+	font-size: 20px;
+	font-family: Calibri light;
+	background: none repeat scroll 0 0 rgba(0,0,0,0.7);
+}
+
+#formreg table{
+	padding-top: 20px;
+		color: white;
+}
+
+#formreg table tr td{
+		padding-left: 50px;
+}
+
+#mensaje a:link{
+	color: #7F6D00 !important;
+	font-size: 60px;
+	text-decoration: none;
+}
+
+
+#mensaje{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1000px;
+	text-align: center;
+	font-size: 40px;
+	font-family: Calibri light;
+	background-color: #FFDA00;
+	transition: all 0.3s linear 0s;
+}
+
+#mensaje:hover{
+	color: black;
+	background: none repeat scroll 0 0 rgba(0,0,0,0.5) !important;
+	transition: all 0.3s linear 0s;
+}
+
+
+
